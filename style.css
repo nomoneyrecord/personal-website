@@ -1,6 +1,8 @@
 body {
   margin: 0;
   background-color: gray;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
 }
 
 .container {
@@ -11,3 +13,54 @@ body {
 header {
   background: cyan
 }
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+nav {
+  float: left;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 0, 76px;
+  padding-top: 23px;
+  padding-bottom: 23px;
+
+  position:relative
+}
+
+nav a {
+  color: rgb(36, 67, 0);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14pt;
+}
+
+nav a:hover {
+  color: rgb(0, 0, 0);
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 100%;
+
+  position:absolute;
+  top: 0;
+  width: 0%;
+}
+
+nav a:hover::before {
+  width: 100%
+} 
